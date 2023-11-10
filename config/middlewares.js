@@ -1,5 +1,5 @@
 module.exports = [
-  // ...
+  'strapi::errors',
   {
     name: 'strapi::security',
     config: {
@@ -12,19 +12,32 @@ module.exports = [
             'data:',
             'blob:',
             'market-assets.strapi.io',
-            'yourBucketName.s3.yourRegion.amazonaws.com',
+            '*.digitaloceanspaces.com',
+            '*.fra1.digitaloceanspaces.com',
+            'fra1.digitaloceanspaces.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'market-assets.strapi.io',
-            'yourBucketName.s3.yourRegion.amazonaws.com',
+            '*.digitaloceanspaces.com',
+            '*.fra1.digitaloceanspaces.com',
+            'fra1.digitaloceanspaces.com',
           ],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
-  // ...
+  'strapi::cors',
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
 ];
+
+
